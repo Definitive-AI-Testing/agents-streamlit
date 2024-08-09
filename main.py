@@ -15,10 +15,12 @@ show_pages(
         Page("form.py", "Form", "🛠️", in_section=True),
         Page("brainstorm.py", "Brainstorm", "🛠️", in_section=True),     
         Page("video.py", "Video Interview", "🛠️", in_section=True),
+        Section("Aider", "🧙‍♂️"),
+        Page("aider_gui.py", "Aider",  icon="🛠️", in_section=True),
         Section("Agents", "💾"),
         Page("management.py", "Management", "🛠️", in_section=True),
         Page("registration.py", "Signup",  icon="📩", in_section=False ),
-        Page("blog.py", "Blog",  icon="📩", in_section=False ),
+        Page("blog.py", "Blog",  icon="📩", in_section=False ),        
     ]
 )
 
@@ -206,6 +208,9 @@ footer {visibility: hidden;}
 """
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+if __name__ == '__main__':
+    print("Start")
 
 
 # To make discussions in Discord more organized:

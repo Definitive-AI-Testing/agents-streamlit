@@ -131,7 +131,7 @@ if len(st.session_state.messages) == 0 and anth_api_key != "" and defai_api_key 
 async def get_response(prompt,uploaded_file):  
     headers1 = {"Authorization": f"{defai_api_key}", "sessionid": session_id, "anthapikey": anth_api_key}   
     if uploaded_file is None:
-        chat_response = requests.post(url=url + "/api/brainstorming", headers=headers, json={"prompt": prompt,})
+        chat_response = requests.post(url=url + "/api/brainstorming", headers=headers1, json={"prompt": prompt,})
         assistant_response = chat_response.json()["response"]
     else:
         files = {"file": uploaded_file}
